@@ -59,10 +59,12 @@ def fetch_shopify_tees():
             if not images or not variants:
                 continue
 
-            raw_price = str(variants[0].get("price", "")).replace(".00", "")
+            first_variant = variants[0]
+            first_image = images[0]
+            raw_price = str(first_variant.get("price", "")).replace(".00", "")
             label = f"{title} (Rs. {raw_price})" if raw_price else title
             catalog[label] = {
-                "image": images[0]["src"],
+                "image": first_image["src"],
                 "desc": f"{title} heavyweight oversized streetwear t-shirt",
                 "url": f"{SHOPIFY_STORE}/products/{p.get('handle', '')}",
             }
@@ -138,6 +140,7 @@ def on_select_tee(selected_tee_name):
 
 INITIAL_CATALOG = fetch_shopify_tees()
 INITIAL_KEYS = list(INITIAL_CATALOG.keys())
+FIRST_KEY = INITIAL_KEYS[0]
 
 with gr.Blocks(title="Keralon AI Virtual Fitting Room", theme=gr.themes.Soft()) as demo:
     gr.Markdown("## KERALON // AI VIRTUAL FITTING ROOM\nUpload your photo and preview any Keralon oversized tee on yourself before ordering.")
@@ -146,17 +149,17 @@ with gr.Blocks(title="Keralon AI Virtual Fitting Room", theme=gr.themes.Soft()) 
         with gr.Column():
             tee_dropdown = gr.Dropdown(
                 choices=INITIAL_KEYS,
-                value=INITIAL_KEYS[0],
+                value=FIRST_KEY,
                 label="1. Select Keralon Oversized Tee",
             )
             garment_preview = gr.Image(
-                value=INITIAL_CATALOG[INITIAL_KEYS[0]]["image"],
+                value=INITIAL_CATALOG[FIRST_KEY]["image"],
                 label="Selected Tee Preview",
                 interactive=False,
                 height=300,
             )
             product_link = gr.HTML(
-                f'<div style="text-align:center;margin-top:8px;"><a href="{INITIAL_CATALOG[INITIAL_KEYS[0]]["url"]}" target="_blank" style="font-weight:700;">View Product on Keralon &rarr;</a></div>'
+                f'<div style="text-align:center;margin-top:8px;"><a href="{INITIAL_CATALOG[FIRST_KEY]["url"]}" target="_blank" style="font-weight:700;">View Product on Keralon &rarr;</a></div>'
             )
 
         with gr.Column():
