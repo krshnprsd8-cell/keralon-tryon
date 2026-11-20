@@ -47,7 +47,8 @@ def fetch_shopify_tees():
         for p in data.get("products", []):
             title = p.get("title", "").strip()
             ptype = p.get("product_type", "").lower()
-            tags = " ".join(p.get("tags", [])).lower()
+            raw_tags = p.get("tags", [])
+            tags = " ".join(raw_tags).lower() if isinstance(raw_tags, list) else str(raw_tags).lower()
             check_text = f"{title.lower()} {ptype} {tags}"
 
             if not any(word in check_text for word in apparel_words):
