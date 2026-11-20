@@ -22,6 +22,11 @@ KERALON_CATALOG = {
         "desc": "black heavyweight oversized stoic lion graphic t-shirt",
         "url": "https://myshopify.com",
     },
+        'Deadline Coffee // No Sleep Club — 240 GSM Oversized Tee (₹1,199)': {
+        "image": "tee_deadline_coffee.png",
+        "desc": "off-white cream heavyweight oversized streetwear t-shirt with box-head coffee graphic print",
+        "url": "https://myshopify.com",
+    },
 }
 
 VTON_SPACES = ["yisol/IDM-VTON", "jjlealse/IDM-VTON"]
