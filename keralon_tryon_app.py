@@ -6,7 +6,7 @@ import gradio as gr
 from gradio_client import Client, handle_file
 
 HF_TOKEN = os.getenv("HF_TOKEN", "")
-SHOPIFY_STORE = "keralon-in.myshopify.com"
+SHOPIFY_STORE = "https://myshopify.com"
 
 FALLBACK_CATALOG = {
     'Keralon "Busy Year" Oversized Tee (Rs. 799)': {
