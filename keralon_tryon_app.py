@@ -24,10 +24,15 @@ FALLBACK_CATALOG = {
         "desc": "black heavyweight oversized stoic lion graphic t-shirt",
         "url": SHOPIFY_STORE,
     },
-    'Deadline Coffee // No Sleep Club — 240 GSM Oversized Tee (Rs. 1,199)': {
+     'Deadline Coffee // No Sleep Club — 240 GSM Oversized Tee (Rs. 1,199)': {
         "image": "tee_deadline_coffee.png",
         "desc": "off-white cream heavyweight oversized streetwear t-shirt with box-head coffee graphic print",
-        "url": SHOPIFY_STORE,
+        "url": "https://myshopify.com",
+    },
+    'Better Luck Next Lifetime — 240 GSM Oversized Tee (Rs. 1,099)': {
+        "image": "https://admin.shopify.com/store/keralon-in/products/15521473790272",
+        "desc": "off-white cream heavyweight oversized streetwear t-shirt with cosmic hourglass serpent and roses graphic print",
+        "url": "https://myshopify.com",
     },
 }
 
