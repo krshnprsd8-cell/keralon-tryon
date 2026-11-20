@@ -7,27 +7,28 @@ HF_TOKEN = os.getenv("HF_TOKEN", "")
 
 # --- YOUR LIVE KERALON DROP 01 CATALOG ---
 KERALON_CATALOG = {
-    'Keralon "Busy Year" Oversized Tee (â‚¹799)': {
+    'Keralon "Busy Year" Oversized Tee (Rs. 799)': {
         "image": "tee_busy_year.png",
         "desc": "white heavyweight oversized streetwear graphic t-shirt",
         "url": "https://myshopify.com",
     },
-    'Keralon "Midnight Drift" Neon Oversized Tee (â‚¹899)': {
+    'Keralon "Midnight Drift" Neon Oversized Tee (Rs. 899)': {
         "image": "tee_midnight_drift.png",
-        "desc": "jet-black heavyweight oversized neon streetwear t-shirt",
+        "desc": "jet-black heavyweight oversized neon t-shirt",
         "url": "https://myshopify.com",
     },
-    'Keralon "Fortis Fortuna Adiuvat" Stoic Tee (â‚¹899)': {
+    'Keralon "Fortis Fortuna Adiuvat" Stoic Tee (Rs. 899)': {
         "image": "tee_fortis_fortuna.png",
         "desc": "black heavyweight oversized stoic lion graphic t-shirt",
         "url": "https://myshopify.com",
     },
-        'Deadline Coffee // No Sleep Club — 240 GSM Oversized Tee (₹1,199)': {
+    'Deadline Coffee // No Sleep Club — 240 GSM Oversized Tee (Rs. 1,199)': {
         "image": "tee_deadline_coffee.png",
         "desc": "off-white cream heavyweight oversized streetwear t-shirt with box-head coffee graphic print",
         "url": "https://myshopify.com",
     },
 }
+
 
 VTON_SPACES = ["yisol/IDM-VTON", "jjlealse/IDM-VTON"]
 
