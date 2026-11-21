@@ -172,13 +172,6 @@ with gr.Blocks(title="Keralon Try It On", theme=gr.themes.Soft(), css=CUSTOM_CSS
         inputs=(user_photo, active_garm_state, tee_dropdown),
         outputs=(result_img,),
     )
-@demo.app.middleware("http")
-async def allow_shopify_iframe(request, call_next):
-    response = await call_next(request)
-    if "x-frame-options" in response.headers:
-        del response.headers["x-frame-options"]
-    response.headers["Content-Security-Policy"] = "frame-ancestors 'self' https://*.myshopify.com https://keralon.in https://*.keralon.in;"
-    return response
 
 if __name__ == "__main__":
     port = int(os.environ.get("PORT", 7860))
